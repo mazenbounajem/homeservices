@@ -51,4 +51,4 @@ Follow these steps to install the necessary dependencies and set up the project:
 4. install flask from you ide open terminal and run:'pip install flask'.
 5. create a new database in sql server management studio named 'Servesis'.
 6. restore the database provided in the project to this database. 
-5. change the connection string and the user name and password on project to make the connections with database.
+5. change the connection string and the user name and password on project to make the connections with database.# homeservices
