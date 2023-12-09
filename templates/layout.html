@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}" />
+    <script src="https://kit.fontawesome.com/9a7bb23ded.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section>
+    <header class="box">
+    <nav class="right">
+      <ul>
+      
+      <li><a href="{{ url_for('index') }}">Home</a></li>
+      <li><a href="{{ url_for('about')}}">About</a></li>
+      <li><a href="{{url_for('services')}}">Services</a></li>
+      <li><a href="{{url_for('contacts')}}">Contacts</a></li>
+      <li><a href="{{url_for('login')}}">Login</a></li>
+      <li><a><i class="fa-solid fa-envelope fa-xl " style="color: #e2e5e9;"></i></a></li>
+      <li><a><i class="fa-solid fa-phone fa-lg " style="color: #c3c6b9;"></i></a></li>
+
+      </ul>
+    </nav>     
+    </header>
+  </section>
+    <section >
+      
+      <div class="container">
+     
+      <img src="../static/Images/display.webp" alt="homeservices" width="100%" height="10%">
+      <div class="centered"><h1><strong>Handy Man<br>Domestic and commercial workmanship</strong></h1></div>
+     
+    </div>
+    </section>
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+        <hr/>
+        <footer>
+            {% block footer %}
+            {% endblock %}
+           
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
